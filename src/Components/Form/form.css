@@ -1,0 +1,44 @@
+.formulario-container {
+    max-width: 80vw;
+    max-height: auto
+;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .formulario-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .formulario-container input[type="text"],
+  .formulario-container textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .formulario-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #c8102e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .formulario-container button:hover {
+    background-color: #c8102e;
+  }
+  
+  .formulario-container input[type="file"] {
+    margin-top: 5px;
+  }
+  
