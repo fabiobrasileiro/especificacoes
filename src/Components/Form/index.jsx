@@ -1,103 +1,147 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './form.css';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 const Formulario = () => {
   const [formulario, setFormulario] = useState({
     objetivo: '',
     situacaoAtual: '',
+    fotoSituacao: null, // Adicione o campo fotoSituacao ao estado do formulário
     escopoProposta: '',
-    especificacoesEquipamentos: '',
+    fotoEscopo: null, // Adicione o campo fotoEscopo ao estado do formulário
     materiais: '',
     equipamentos: '',
     servicos: '',
     suporteMensal: '',
     demaisCondicoes: '',
-    imagens: [],
-    descricoesImagens: [],
+    empresa: ''
   });
 
-  const handleChange = (e) => {
-    setFormulario({ ...formulario, [e.target.name]: e.target.value });
+  const handleChange = (name, value) => {
+    setFormulario({ ...formulario, [name]: value });
   };
 
+  const handleFileChange = (name, file) => {
+    setFormulario({ ...formulario, [name]: file });
+  };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
+    const formData = new FormData();
+  
+    formData.append('objetivo', formulario.objetivo);
+    formData.append('situacaoAtual', formulario.situacaoAtual);
+    formData.append('escopoProposta', formulario.escopoProposta);
+    formData.append('materiais', formulario.materiais);
+    formData.append('equipamentos', formulario.equipamentos);
+    formData.append('servicos', formulario.servicos);
+    formData.append('suporteMensal', formulario.suporteMensal);
+    formData.append('demaisCondicoes', formulario.demaisCondicoes);
+    formData.append('empresa', formulario.empresa);
+    formData.append('fotoSituacao', formulario.fotoSituacao); // Certifique-se de que o campo está sendo adicionado corretamente
+    formData.append('fotoEscopo', formulario.fotoEscopo); // Certifique-se de que o campo está sendo adicionado corretamente
+  
+    console.log('Conteúdo do formulário:', formData);
+  
     try {
-      const response = await axios.post('http://localhost:5000/enviar-dados', formulario);
+      const response = await axios.post('http://localhost:5000/enviar-dados', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
       console.log(response.data);
+      // Limpar o formulário após o envio bem-sucedido
+      setFormulario({
+        objetivo: '',
+        situacaoAtual: '',
+        fotoSituacao: null,
+        escopoProposta: '',
+        fotoEscopo: null,
+        materiais: '',
+        equipamentos: '',
+        servicos: '',
+        suporteMensal: '',
+        demaisCondicoes: '',
+        empresa: '',
+        caminhoImagensSituacaoAtual: [], // Campo de imagens da Situação Atual
+        caminhoImagensEscopoProposta: [], 
+      });
     } catch (error) {
       console.error('Erro ao enviar os dados:', error);
     }
   };
   
+
   return (
     <div>
       <form onSubmit={handleSubmit} className="formulario-container">
         <label>
+          Empresa:
+          <ReactQuill value={formulario.empresa} onChange={(value) => handleChange('empresa', value)} />
+
+        </label>
+        <br />
+
+        <label>
           Objetivo:
-          <input type="text" name="objetivo" value={formulario.objetivo} onChange={handleChange} />
+          <ReactQuill value={formulario.objetivo} onChange={(value) => handleChange('objetivo', value)} />
         </label>
         <br />
 
         <label>
           Situação Atual:
-          <input type="text" name="situacaoAtual" value={formulario.situacaoAtual} onChange={handleChange} />
+          <ReactQuill value={formulario.situacaoAtual} onChange={(value) => handleChange('situacaoAtual', value)} />
+        </label>
+        <br />
+
+        <label>
+          Foto Situação:
+          <input type="file" onChange={(e) => handleFileChange('fotoSituacao', e.target.files[0])} />
         </label>
         <br />
 
         <label>
           Escopo da Proposta:
-          <input type="text" name="escopoProposta" value={formulario.escopoProposta} onChange={handleChange} />
+          <ReactQuill value={formulario.escopoProposta} onChange={(value) => handleChange('escopoProposta', value)} />
         </label>
         <br />
 
         <label>
-          Especificações dos Equipamentos:
-          <textarea name="especificacoesEquipamentos" value={formulario.especificacoesEquipamentos} onChange={handleChange} />
+          Foto Escopo:
+          <input type="file" onChange={(e) => handleFileChange('fotoEscopo', e.target.files[0])} />
         </label>
         <br />
 
         <label>
           Materiais:
-          <textarea name="materiais" value={formulario.materiais} onChange={handleChange} />
+          <ReactQuill value={formulario.materiais} onChange={(value) => handleChange('materiais', value)} />
         </label>
         <br />
 
         <label>
           Equipamentos:
-          <textarea name="equipamentos" value={formulario.equipamentos} onChange={handleChange} />
+          <ReactQuill value={formulario.equipamentos} onChange={(value) => handleChange('equipamentos', value)} />
         </label>
         <br />
 
         <label>
           Serviços:
-          <textarea name="servicos" value={formulario.servicos} onChange={handleChange} />
+          <ReactQuill value={formulario.servicos} onChange={(value) => handleChange('servicos', value)} />
         </label>
         <br />
 
         <label>
           Suporte Mensal:
-          <textarea name="suporteMensal" value={formulario.suporteMensal} onChange={handleChange} />
+          <ReactQuill value={formulario.suporteMensal} onChange={(value) => handleChange('suporteMensal', value)} />
         </label>
         <br />
 
         <label>
           Demais Condições:
-          <textarea name="demaisCondicoes" value={formulario.demaisCondicoes} onChange={handleChange} />
-        </label>
-        <br />
-
-        <label>
-          Imagens:
-          <input type="file" name="imagens" onChange={handleChange} multiple />
-        </label>
-        <br />
-
-        <label>
-          Descrições das imagens:
-          <textarea name="descricoesImagens" value={formulario.descricoesImagens} onChange={handleChange} />
+          <ReactQuill value={formulario.demaisCondicoes} onChange={(value) => handleChange('demaisCondicoes', value)} />
         </label>
         <br />
 

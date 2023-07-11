@@ -1,17 +1,30 @@
-import React from 'react';
-import './Galeria.css';
+import React, { useState, useEffect } from 'react';
 
-const Gallery = ({ images }) => {
+const Gallery = () => {
+  const [fotos, setFotos] = useState([]);
+
+  useEffect(() => {
+    const obterFotos = async () => {
+      try {
+        // Fazer a chamada para o endpoint que retorna as fotos
+        const response = await fetch('http://localhost:5000/uploads/');
+        const data = await response.json();
+        setFotos(data);
+      } catch (error) {
+        console.error('Erro ao obter fotos:', error);
+      }
+    };
+
+    obterFotos();
+  }, []);
+
   return (
-    <div className="gallery">
-      {images.map((image, index) => (
-        <div key={index} className="gallery-item">
-          <img src={image} alt={image.alt} className="gallery-image" />
-          <div className="gallery-description">{image.description}</div>
-        </div>
+    <div>
+      {fotos.map((foto, index) => (
+        <img key={index} src={foto} alt={`Foto ${index}`} />
       ))}
     </div>
   );
-}
+};
 
 export default Gallery;

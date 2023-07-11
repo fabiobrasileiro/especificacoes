@@ -1,0 +1,288 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/siteproposta/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="/siteproposta/logo192.png">
+
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/siteproposta/manifest.json">
+    <!--
+      Notice the use of /siteproposta in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/siteproposta/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <script defer="" src="/siteproposta/static/js/bundle.js"></script><style>body {
+  margin: 0;
+  padding: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1QsYUFBYTtFQUNiOztjQUVZO0VBQ1osbUNBQW1DO0VBQ25DLGtDQUFrQztBQUNwQzs7QUFFQTtFQUNFO2FBQ1c7QUFDYiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IGF1dG87XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcbiAgICAnVWJ1bnR1JywgJ0NhbnRhcmVsbCcsICdGaXJhIFNhbnMnLCAnRHJvaWQgU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsXG4gICAgc2Fucy1zZXJpZjtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgJ0NvdXJpZXIgTmV3JyxcbiAgICBtb25vc3BhY2U7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>.formulario-container {
+    max-width: 80vw;
+    max-height: auto
+;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .formulario-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .formulario-container input[type="text"],
+  .formulario-container textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .formulario-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #c8102e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .formulario-container button:hover {
+    background-color: #c8102e;
+  }
+  
+  .formulario-container input[type="file"] {
+    margin-top: 5px;
+  }
+  
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9Db21wb25lbnRzL0Zvcm0vZm9ybS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxlQUFlO0lBQ2Y7QUFDSjtJQUNJLGNBQWM7SUFDZCxhQUFhO0lBQ2IseUJBQXlCO0lBQ3pCLHNCQUFzQjtJQUN0QixrQkFBa0I7RUFDcEI7O0VBRUE7SUFDRSxjQUFjO0lBQ2QsbUJBQW1CO0VBQ3JCOztFQUVBOztJQUVFLFdBQVc7SUFDWCxZQUFZO0lBQ1osc0JBQXNCO0lBQ3RCLGtCQUFrQjtFQUNwQjs7RUFFQTtJQUNFLGNBQWM7SUFDZCxXQUFXO0lBQ1gsYUFBYTtJQUNiLGdCQUFnQjtJQUNoQix5QkFBeUI7SUFDekIsV0FBVztJQUNYLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsZUFBZTtFQUNqQjs7RUFFQTtJQUNFLHlCQUF5QjtFQUMzQjs7RUFFQTtJQUNFLGVBQWU7RUFDakIiLCJzb3VyY2VzQ29udGVudCI6WyIuZm9ybXVsYXJpby1jb250YWluZXIge1xyXG4gICAgbWF4LXdpZHRoOiA4MHZ3O1xyXG4gICAgbWF4LWhlaWdodDogYXV0b1xyXG47XHJcbiAgICBtYXJnaW46IDAgYXV0bztcclxuICAgIHBhZGRpbmc6IDIwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjlmOWY5O1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICB9XHJcbiAgXHJcbiAgLmZvcm11bGFyaW8tY29udGFpbmVyIGxhYmVsIHtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTBweDtcclxuICB9XHJcbiAgXHJcbiAgLmZvcm11bGFyaW8tY29udGFpbmVyIGlucHV0W3R5cGU9XCJ0ZXh0XCJdLFxyXG4gIC5mb3JtdWxhcmlvLWNvbnRhaW5lciB0ZXh0YXJlYSB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHBhZGRpbmc6IDhweDtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgfVxyXG4gIFxyXG4gIC5mb3JtdWxhcmlvLWNvbnRhaW5lciBidXR0b24ge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbiAgICBtYXJnaW4tdG9wOiAxMHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2M4MTAyZTtcclxuICAgIGNvbG9yOiAjZmZmO1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIH1cclxuICBcclxuICAuZm9ybXVsYXJpby1jb250YWluZXIgYnV0dG9uOmhvdmVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNjODEwMmU7XHJcbiAgfVxyXG4gIFxyXG4gIC5mb3JtdWxhcmlvLWNvbnRhaW5lciBpbnB1dFt0eXBlPVwiZmlsZVwiXSB7XHJcbiAgICBtYXJnaW4tdG9wOiA1cHg7XHJcbiAgfVxyXG4gICJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.navbar {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .navbar-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin-right: 20px;
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .navbar-link:hover {
+    color: #555;
+  }
+  
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9Db21wb25lbnRzL05hdmJhci9OYXZiYXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kseUJBQXlCO0lBQ3pCLGFBQWE7RUFDZjs7RUFFQTtJQUNFLGFBQWE7SUFDYix1QkFBdUI7SUFDdkIsZ0JBQWdCO0lBQ2hCLFNBQVM7SUFDVCxVQUFVO0VBQ1o7O0VBRUE7SUFDRSxrQkFBa0I7RUFDcEI7O0VBRUE7SUFDRSxxQkFBcUI7SUFDckIsV0FBVztJQUNYLGlCQUFpQjtJQUNqQixlQUFlO0VBQ2pCOztFQUVBO0lBQ0UsV0FBVztFQUNiIiwic291cmNlc0NvbnRlbnQiOlsiLm5hdmJhciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyO1xyXG4gICAgcGFkZGluZzogMTBweDtcclxuICB9XHJcbiAgXHJcbiAgLm5hdmJhci1saXN0IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGxpc3Qtc3R5bGU6IG5vbmU7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gIH1cclxuICBcclxuICAubmF2YmFyLWl0ZW0ge1xyXG4gICAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xyXG4gIH1cclxuICBcclxuICAubmF2YmFyLWxpbmsge1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgY29sb3I6ICMzMzM7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxuICB9XHJcbiAgXHJcbiAgLm5hdmJhci1saW5rOmhvdmVyIHtcclxuICAgIGNvbG9yOiAjNTU1O1xyXG4gIH1cclxuICAiXSwic291cmNlUm9vdCI6IiJ9 */</style><style>/* .proposal {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 400px;
+  }
+  
+  .cover-image img {
+    width: 100%;
+    max-width: 1800px;
+    height: auto;
+  }
+  
+  .proposal-content {
+    max-width: 0px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+   */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9Db21wb25lbnRzL1Byb3Bvc3RhL1Byb3Bvc3RhLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBdUNJIiwic291cmNlc0NvbnRlbnQiOlsiLyogLnByb3Bvc2FsIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgcGFkZGluZzogMjBweCA0MDBweDtcclxuICB9XHJcbiAgXHJcbiAgLmNvdmVyLWltYWdlIGltZyB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIG1heC13aWR0aDogMTgwMHB4O1xyXG4gICAgaGVpZ2h0OiBhdXRvO1xyXG4gIH1cclxuICBcclxuICAucHJvcG9zYWwtY29udGVudCB7XHJcbiAgICBtYXgtd2lkdGg6IDBweDtcclxuICB9XHJcbiAgXHJcbiAgaDEge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZm9udC1zaXplOiAyNHB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxuICB9XHJcbiAgXHJcbiAgc2VjdGlvbiB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAzMHB4O1xyXG4gIH1cclxuICBcclxuICBoMiB7XHJcbiAgICBmb250LXNpemU6IDE4cHg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xyXG4gIH1cclxuICBcclxuICB1bCB7XHJcbiAgICBsaXN0LXN0eWxlLXR5cGU6IGRpc2M7XHJcbiAgICBtYXJnaW4tbGVmdDogMjBweDtcclxuICB9XHJcbiAgXHJcbiAgcCB7XHJcbiAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgfVxyXG4gICAqLyJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1);
+}
+
+.gallery-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-description {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9Db21wb25lbnRzL0dhbGVyaWEvR2FsZXJpYS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2IsNERBQTREO0VBQzVELGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixzQ0FBc0M7QUFDeEM7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixzQ0FBc0M7QUFDeEM7O0FBRUE7RUFDRSxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsU0FBUztFQUNULE9BQU87RUFDUCxXQUFXO0VBQ1gsb0NBQW9DO0VBQ3BDLFdBQVc7RUFDWCxhQUFhO0VBQ2IsZUFBZTtFQUNmLFVBQVU7RUFDVixvQ0FBb0M7QUFDdEM7O0FBRUE7RUFDRSxVQUFVO0FBQ1oiLCJzb3VyY2VzQ29udGVudCI6WyIuZ2FsbGVyeSB7XHJcbiAgZGlzcGxheTogZ3JpZDtcclxuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdChhdXRvLWZpbGwsIG1pbm1heCgzMDBweCwgMWZyKSk7XHJcbiAgZ3JpZC1nYXA6IDEwcHg7XHJcbn1cclxuXHJcbi5nYWxsZXJ5LWl0ZW0ge1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICBib3gtc2hhZG93OiAwIDAgNXB4IHJnYmEoMCwgMCwgMCwgMC4yKTtcclxufVxyXG5cclxuLmdhbGxlcnktaW1hZ2Uge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGhlaWdodDogMTAwJTtcclxuICBvYmplY3QtZml0OiBjb3ZlcjtcclxuICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4zcyBlYXNlLWluLW91dDtcclxufVxyXG5cclxuLmdhbGxlcnktaXRlbTpob3ZlciAuZ2FsbGVyeS1pbWFnZSB7XHJcbiAgdHJhbnNmb3JtOiBzY2FsZSgxLjEpO1xyXG59XHJcblxyXG4uZ2FsbGVyeS1kZXNjcmlwdGlvbiB7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIGJvdHRvbTogMDtcclxuICBsZWZ0OiAwO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC44KTtcclxuICBjb2xvcjogI2ZmZjtcclxuICBwYWRkaW5nOiAxMHB4O1xyXG4gIGZvbnQtc2l6ZTogMTRweDtcclxuICBvcGFjaXR5OiAwO1xyXG4gIHRyYW5zaXRpb246IG9wYWNpdHkgMC4zcyBlYXNlLWluLW91dDtcclxufVxyXG5cclxuLmdhbGxlcnktaXRlbTpob3ZlciAuZ2FsbGVyeS1kZXNjcmlwdGlvbiB7XHJcbiAgb3BhY2l0eTogMTtcclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  height: 100vh; /* Set height to full viewport height */
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2d2d2d;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .search-button {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .search-button i {
+    color: #555;
+  }
+  
+  .search-button:hover {
+    background-color: #e5e5e5;
+  }
+  ul{
+    list-style: none;
+  
+  }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9Db21wb25lbnRzL1NlYXJjaEJveC9TZWFyY2hCb3guY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLHNCQUFzQjtFQUN0QixtQkFBbUI7RUFDbkIsdUJBQXVCLEVBQUUsd0JBQXdCO0VBQ2pELGFBQWEsRUFBRSx1Q0FBdUM7RUFDdEQsV0FBVztFQUNYLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7RUFDRTtJQUNFLFdBQVc7SUFDWCxhQUFhO0lBQ2IseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixlQUFlO0VBQ2pCOztFQUVBO0lBQ0UseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixhQUFhO0lBQ2IsZ0JBQWdCO0lBQ2hCLGVBQWU7RUFDakI7O0VBRUE7SUFDRSxXQUFXO0VBQ2I7O0VBRUE7SUFDRSx5QkFBeUI7RUFDM0I7RUFDQTtJQUNFLGdCQUFnQjs7RUFFbEIiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VhcmNoLWJveCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7IC8qIENlbnRlciBob3Jpem9udGFsbHkgKi9cclxuICBoZWlnaHQ6IDEwMHZoOyAvKiBTZXQgaGVpZ2h0IHRvIGZ1bGwgdmlld3BvcnQgaGVpZ2h0ICovXHJcbiAgd2lkdGg6IDMwdnc7XHJcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XHJcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xyXG59XHJcbiAgLnNlYXJjaC1pbnB1dCB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjMmQyZDJkO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG4gIH1cclxuICBcclxuICAuc2VhcmNoLWJ1dHRvbiB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjJmMmYyO1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgcGFkZGluZzogMTBweDtcclxuICAgIG1hcmdpbi1sZWZ0OiA1cHg7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgfVxyXG4gIFxyXG4gIC5zZWFyY2gtYnV0dG9uIGkge1xyXG4gICAgY29sb3I6ICM1NTU7XHJcbiAgfVxyXG4gIFxyXG4gIC5zZWFyY2gtYnV0dG9uOmhvdmVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNlNWU1ZTU7XHJcbiAgfVxyXG4gIHVse1xyXG4gICAgbGlzdC1zdHlsZTogbm9uZTtcclxuICBcclxuICB9Il0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><nav class="navbar"><ul class="navbar-list"><li class="navbar-item"><a class="navbar-link" href="/formulario">Formulário</a></li><li class="navbar-item"><a class="navbar-link" href="/proposta">Proposta</a></li></ul></nav><div style="display: flex; justify-content: center; align-items: center;"><input type="text" placeholder="Pesquisar propostas por nome" value=""><ul><li>uuuuuuuuuuuuu</li><li>teste</li><li>teste</li><li>teste 2</li><li>dfsaaaaaa</li><li>Teste final</li></ul></div><div class="proposal" style="display: flex; justify-content: center; align-items: center; padding: 0px 400px;"><div><h2>Proposta da empresa: Teste final</h2><div><div class="cover-image"><img src="https://compos.net.br/emailMarketing/1.png" alt="Capa da Proposta"><img src="https://compos.net.br/emailMarketing/3.png" alt="Capa da Proposta"><img src="https://compos.net.br/emailMarketing/4.png" alt="Capa da Proposta"><img src="https://compos.net.br/emailMarketing/2.png" alt="Capa da Proposta"></div><div style="padding: 0px 200px;"><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Empresa</h2><p style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;">Teste final</p><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Objetivo</h2><p style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;">         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae rhoncus sem. Donec imperdiet metus et lorem rhoncus, vitae accumsan augue sollicitudin. Suspendisse potenti. Nulla maximus non mauris sed bibendum. Suspendisse quis orci posuere</p><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Situação Atual</h2><p style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;">         Phasellus ex nunc, convallis et orci ac, tincidunt consectetur sapien. Vivamus accumsan vitae urna ac suscipit. Cras euismod condimentum nisl sit amet suscipit. Ut ex quam, mollis laoreet elit eu, vestibulum egestas odio. Maecenas varius erat eni</p><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Escopo da Proposta</h2><p style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae rhoncus sem. Donec imperdiet metus et lorem rhoncus, vitae accumsan augue sollicitudin. Suspendisse potenti. Nulla maximus non mauris sed bibendum. Suspendisse quis orci posuere, ultri</p><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Especificações dos Equipamentos</h2><p style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;">         °Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae rhoncus sem. 
+
+         °Praesent vitae porttitor nisi. Donec et vestibulum diam, sed maximus eros. Aliquam luctus tortor eget sapien lacinia pharetra. Phasellus porttitor, urna nec mattis rutrum, justo justo pulvinar est, eu luctus velit enim nec dolor. 
+
+         °Nullam faucibus finibus mi, id malesuada sapien semper quis. Fusce at fringilla ex. Aenean lobortis quam enim. Nam ut luctus tortor. Donec faucibus vitae sapien interdum semper. Mauris ipsum mauris, vehicula nec tempor non, bibendum sit amet lectus. Aenean ultrices ac turpis in gravida. Proin a mauris vel lectus rhoncus consectetur. Phasellus eu suscipit dolor, eget ullamcorper quam. 
+
+
+
+          °Fusce rutrum tortor et blandit varius. Mauris malesuada orci felis, eu viverra nibh vulputate nec. Sed at sapien sit amet tortor finibus eleifend.
+</p><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Materiais</h2><p style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae rhoncus sem. Donec imperdiet metus et lorem rhoncus, vitae accumsan augue sollicitudin. Suspendisse potenti. Nulla maximus non mauris sed bibendum. Suspendisse quis orci posuere, ultricies elit non, tincidunt dolor. Etiam dictum est orci, et elementum lorem aliquam malesuada. Nunc ut felis mi. Phasellus a elementum magna, at malesuada neque. Cras semper dui at aliquet gravida. Ut commodo lacus vulputate elit molestie commodo.
+
+         Praesent vitae porttitor nisi. Donec et vestibulum diam, sed maximus eros. Aliquam luctus tortor eget sapien lacinia pharetra. Phasellus porttitor, urna nec mattis rutrum, justo justo pulvinar est, eu luctus velit enim nec dolor. Nullam faucibus finibus mi, id malesuada sapien semper quis. Fusce at fringilla ex. Aenean lobortis quam enim. Nam ut luctus tortor. Donec faucibus vitae sapien interdum semper. Mauris ipsum mauris, vehicula nec tempor non, bibendum sit amet lectus. Aenean ultrices ac turpis in gravida. Proin a mauris vel lectus rhoncus consectetur. Phasellus eu suscipit dolor, eget ullamcorper quam. Fusce rutrum tortor et blandit varius. Mauris malesuada orci felis, eu viverra nibh vulputate nec. Sed at sapien sit amet tortor finibus eleifend.
+</p><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Equipamentos</h2><p style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;"></p><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Serviços</h2><div style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;">          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+     Why do we use it?
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+     Where does it come from?
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+           The standard chunk of Lorem Ipsum used since the 1500</div><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Suporte Mensal</h2><p style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae rhoncus sem. Donec imperdiet metus et lorem rhoncus, vitae accumsan augue sollicitudin. Suspendisse potenti. Nulla maximus non mauris sed bibendum. Suspendisse quis orci posuere, ultricies elit non, tincidunt dolor. Etiam dictum est orci, et elementum lorem aliquam malesuada. Nunc ut felis mi. Phasellus a elementum magna, at malesuada neque. Cras semper dui at aliquet gravida. Ut commodo lacus vulputate elit molestie commodo.
+</p><h2 style="margin-bottom: 10px; border-bottom: 1px solid black; font-size: 24px;">Demais Condições</h2><p style="margin-bottom: 60px; white-space: pre-wrap; font-size: 18px;">  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae rhoncus sem. Donec imperdiet metus et lorem rhoncus, vitae accumsan augue sollicitudin. Suspendisse potenti. Nulla maximus non mauris sed bibendum. Suspendisse quis orci posuere, ultricies elit non, tincidunt dolor. Etiam dictum est orci, et elementum lorem aliquam malesuada. Nunc ut felis mi. Phasellus a elementum magna, at malesuada neque. Cras semper dui at aliquet gravida. Ut commodo lacus vulputate elit molestie commodo.
+
+         Praesent vitae porttitor nisi. Donec et vestibulum diam, sed maximus eros. Aliquam luctus tortor eget sapien lacinia pharetra. Phasellus porttitor, urna nec mattis rutrum, justo justo pulvinar est, eu luctus velit enim nec dolor. Nullam faucibus finibus mi, id malesuada sapien semper quis. Fusce at fringilla ex. Aenean lobortis quam enim. Nam ut luctus tortor. Donec faucibus vitae sapien interdum semper. Mauris ipsum mauris, vehicula nec tempor non, bibendum sit amet lectus. Aenean ultrices ac turpis in gravida. Proin a mauris vel lectus rhoncus consectetur. Phasellus eu suscipit dolor, eget ullamcorper quam. Fusce rutrum tortor et blandit varius. Mauris malesuada orci felis, eu viverra nibh vulputate nec. Sed at sapien sit amet tortor finibus eleifend.
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae rhoncus sem. Donec imperdiet metus et lorem rhoncus, vitae accumsan augue sollicitudin. Suspendisse potenti. Nulla maximus non mauris sed bibendum. Suspendisse quis orci posuere, ultricies elit non, tincidunt dolor. Etiam dictum est orci, et elementum lorem aliquam malesuada. Nunc ut felis mi. Phasellus a elementum magna, at malesuada neque. Cras semper dui at aliquet gravida. Ut commodo lacus vulputate elit molestie commodo.
+
+         Praesent vitae porttitor nisi. Donec et vestibulum diam, sed maximus eros. Aliquam luctus tortor eget sapien lacinia pharetra. Phasellus porttitor, urna nec mattis rutrum, justo justo pulvinar est, eu luctus velit enim nec dolor. Nullam faucibus finibus mi, id malesuada sapien semper quis. Fusce at fringilla ex. Aenean lobortis quam enim. Nam ut luctus tortor. Donec faucibus vitae sapien interdum semper. Mauris ipsum mauris, vehicula nec tempor non, bibendum sit amet lectus. Aenean ultrices ac turpis in gravida. Proin a mauris vel lectus rhoncus consectetur. Phasellus eu suscipit dolor, eget ullamcorper quam. Fusce rutrum tortor et blandit varius. Mauris malesuada orci felis, eu viverra nibh vulputate nec. Sed at sapien sit amet tortor finibus eleifend.
+</p></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+<div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div></body>
